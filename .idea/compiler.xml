@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="jta-jms-jta" />
+        <module name="tx" />
+        <module name="tx-jms" />
+        <module name="tx-jms-jpa" />
+        <module name="tx-jpa" />
+        <module name="tx-jta" />
+        <module name="tx-mysql-mysql" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="jta-jms-jta" target="1.8" />
+      <module name="tx" target="1.7" />
+      <module name="tx-jms" target="1.8" />
+      <module name="tx-jms-jpa" target="1.8" />
+      <module name="tx-jpa" target="1.8" />
+      <module name="tx-jta" target="1.8" />
+      <module name="tx-mysql-mysql" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
