@@ -31,10 +31,13 @@ public class CustomerServiceCode {
         TransactionStatus ts = transactionManager.getTransaction( definition );
         try{
             customerDao.save( customer );
-            if( customer.getName().contains( "error")){
-                throw new RuntimeException("error");
+            if( customer.getName().contains( "error1")){
+                throw new RuntimeException("error1");
             }
             jmsTemplate.convertAndSend( "customer:msg:reply", customer.getName());
+            if( customer.getName().contains( "error2")){
+                throw new RuntimeException("error2");
+            }
             transactionManager.commit( ts );
             return 1;
         }catch (Exception e){
@@ -54,15 +57,18 @@ public class CustomerServiceCode {
         TransactionStatus ts = transactionManager.getTransaction( definition );
         Customer customer = new Customer();
         try{
-
             customer.setAmount(123);
             customer.setPassword("xxx");
             customer.setName( name );
             customerDao.save( customer );
-            if( name.contains( "error")){
-                throw new RuntimeException("error");
+            if( name.contains( "error1")){
+                throw new RuntimeException("error1");
             }
             jmsTemplate.convertAndSend( "customer:msg:reply", customer.getName());
+            if( customer.getName().contains( "error2")){
+                throw new RuntimeException("error2");
+            }
+            transactionManager.commit( ts );
         }catch (Exception e){
             e.printStackTrace();
             transactionManager.rollback( ts );

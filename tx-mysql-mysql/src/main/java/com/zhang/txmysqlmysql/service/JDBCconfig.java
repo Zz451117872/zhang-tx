@@ -45,7 +45,7 @@ public class JDBCconfig {
     }
 
     @Bean
-    @ConfigurationProperties( prefix = "spring.order.user")
+    @ConfigurationProperties( prefix = "spring.ds.order")
     public DataSourceProperties orderDataSourceProperties(){
         return new DataSourceProperties();
     }

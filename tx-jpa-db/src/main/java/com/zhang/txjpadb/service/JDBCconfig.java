@@ -1,4 +1,4 @@
-package com.zhang.tx_jpa_db.service;
+package com.zhang.txjpadb.service;
 
 import com.zaxxer.hikari.HikariDataSource;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -10,9 +10,9 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.data.transaction.ChainedTransactionManager;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
-import org.springframework.orm.jpa.JpaTransactionManager;
-import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
-import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
+//import org.springframework.orm.jpa.JpaTransactionManager;
+//import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
+//import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
 
 import javax.sql.DataSource;
@@ -35,24 +35,29 @@ public class JDBCconfig {
     }
 
     @Bean
-   public LocalContainerEntityManagerFactoryBean entityManagerFactory(){
-        HibernateJpaVendorAdapter adapter = new HibernateJpaVendorAdapter();
-        adapter.setGenerateDdl( false );
-        LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
-        factory.setJpaVendorAdapter( adapter );
-        factory.setDataSource( userDataSource() );
-        factory.setPackagesToScan( "com.zhang.tx_jpa_db");
-        return factory;
-   }
-
-    @Bean
-    public PlatformTransactionManager transactionManager(){
-        JpaTransactionManager userTM = new JpaTransactionManager(  );
-        userTM.setEntityManagerFactory( entityManagerFactory().getObject() );
-        DataSourceTransactionManager orderTM = new DataSourceTransactionManager( orderDataSource() );
-        ChainedTransactionManager tm = new ChainedTransactionManager( userTM , orderTM );
-        return tm;
+    public JdbcTemplate userJdbcTemplate(@Qualifier("userDataSource") DataSource userDataSource){
+        return new JdbcTemplate( userDataSource );
     }
+
+//    @Bean
+//   public LocalContainerEntityManagerFactoryBean entityManagerFactory(){
+//        HibernateJpaVendorAdapter adapter = new HibernateJpaVendorAdapter();
+//        adapter.setGenerateDdl( false );
+//        LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
+//        factory.setJpaVendorAdapter( adapter );
+//        factory.setDataSource( userDataSource() );
+//        factory.setPackagesToScan( "com.zhang.txjpadb");
+//        return factory;
+//   }
+//
+//    @Bean
+//    public PlatformTransactionManager transactionManager(){
+//        JpaTransactionManager userTM = new JpaTransactionManager(  );
+//        userTM.setEntityManagerFactory( entityManagerFactory().getObject() );
+//        DataSourceTransactionManager orderTM = new DataSourceTransactionManager( orderDataSource() );
+//        ChainedTransactionManager tm = new ChainedTransactionManager( userTM , orderTM );
+//        return tm;
+//    }
 
     @Bean
     @ConfigurationProperties( prefix = "spring.order.user")

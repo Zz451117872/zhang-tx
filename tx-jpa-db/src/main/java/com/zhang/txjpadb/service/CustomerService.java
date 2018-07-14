@@ -1,8 +1,8 @@
-package com.zhang.tx_jpa_db.service;
+package com.zhang.txjpadb.service;
 
-import com.zhang.tx_jpa_db.dao.CustomerDao;
-import com.zhang.tx_jpa_db.domain.Customer;
-import com.zhang.tx_jpa_db.domain.Order;
+import com.zhang.txjpadb.dao.CustomerDao;
+import com.zhang.txjpadb.domain.Customer;
+import com.zhang.txjpadb.domain.Order;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -13,7 +13,8 @@ import org.springframework.transaction.annotation.Transactional;
 public class CustomerService {
 
     @Autowired
-    private CustomerDao customerDao;
+    @Qualifier("userJdbcTemplate")
+    private JdbcTemplate userJdbcTemplate;
 
     @Autowired
     @Qualifier("orderJdbcTemplate")
@@ -21,9 +22,9 @@ public class CustomerService {
 
     @Transactional
     public void createOrder(Order order) {
-        Customer customer = customerDao.getOne( order.getCid() );
-        customer.setAmount( customer.getAmount() - order.getAmount() );
-        customerDao.save( customer );
+//        Customer customer = customerDao.getOne( order.getCid() );
+//        customer.setAmount( customer.getAmount() - order.getAmount() );
+//        customerDao.save( customer );
         if( order.getTitle().contains( "error1")){
             throw new RuntimeException("error1");
         }

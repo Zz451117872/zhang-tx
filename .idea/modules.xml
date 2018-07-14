@@ -3,15 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/jta-jms-jta/jta-jms-jta.iml" filepath="$PROJECT_DIR$/jta-jms-jta/jta-jms-jta.iml" />
-      <module fileurl="file://$PROJECT_DIR$/jta-jms-jta/jta-jms-jta.iml" filepath="$PROJECT_DIR$/jta-jms-jta/jta-jms-jta.iml" />
       <module fileurl="file://$PROJECT_DIR$/tx.iml" filepath="$PROJECT_DIR$/tx.iml" />
-      <module fileurl="file://$PROJECT_DIR$/tx-jms/tx-jms.iml" filepath="$PROJECT_DIR$/tx-jms/tx-jms.iml" />
       <module fileurl="file://$PROJECT_DIR$/tx-jms/tx-jms.iml" filepath="$PROJECT_DIR$/tx-jms/tx-jms.iml" />
       <module fileurl="file://$PROJECT_DIR$/tx-jms-db/tx-jms-db.iml" filepath="$PROJECT_DIR$/tx-jms-db/tx-jms-db.iml" />
       <module fileurl="file://$PROJECT_DIR$/tx-jpa/tx-jpa.iml" filepath="$PROJECT_DIR$/tx-jpa/tx-jpa.iml" />
-      <module fileurl="file://$PROJECT_DIR$/tx-jpa/tx-jpa.iml" filepath="$PROJECT_DIR$/tx-jpa/tx-jpa.iml" />
       <module fileurl="file://$PROJECT_DIR$/tx-jpa-db/tx-jpa-db.iml" filepath="$PROJECT_DIR$/tx-jpa-db/tx-jpa-db.iml" />
-      <module fileurl="file://$PROJECT_DIR$/tx-jta/tx-jta.iml" filepath="$PROJECT_DIR$/tx-jta/tx-jta.iml" />
       <module fileurl="file://$PROJECT_DIR$/tx-jta/tx-jta.iml" filepath="$PROJECT_DIR$/tx-jta/tx-jta.iml" />
       <module fileurl="file://$PROJECT_DIR$/tx-mysql-mysql/tx-mysql-mysql.iml" filepath="$PROJECT_DIR$/tx-mysql-mysql/tx-mysql-mysql.iml" />
     </modules>

@@ -20,7 +20,7 @@ public class CustomerService {
 
     @Transactional
     public void createOrder(Order order) {
-        String sql = "update customer1 set amount = ? where cid = ?";
+        String sql = "update customer1 set amount = amount - ? where cid = ?";
         userJdbcTemplate.update( sql , order.getAmount() , order.getCid() );
         if( order.getTitle().contains( "error1")){
             throw new RuntimeException("error1");

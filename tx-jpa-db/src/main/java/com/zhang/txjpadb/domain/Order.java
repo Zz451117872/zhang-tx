@@ -1,4 +1,4 @@
-package com.zhang.tx_jpa_db.domain;
+package com.zhang.txjpadb.domain;
 
 public class Order {
 

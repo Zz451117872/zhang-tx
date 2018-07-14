@@ -1,67 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <resourceExtensions />
     <annotationProcessing>
-      <profile default="true" name="Default" enabled="false">
-        <processorPath useClasspath="true" />
-      </profile>
-      <profile default="false" name="Maven default annotation processors profile" enabled="true">
+      <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="tx" />
-        <module name="tx-jms-jpa" />
-      </profile>
-      <profile default="false" name="Annotation profile for tx-jms" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="tx-jms" />
-      </profile>
-      <profile default="false" name="Annotation profile for tx-jpa" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="tx-jpa" />
-      </profile>
-      <profile default="false" name="Annotation profile for tx-jpa-db" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="tx-jpa-db" />
-      </profile>
-      <profile default="false" name="Annotation profile for jta-jms-jta" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
         <module name="jta-jms-jta" />
-      </profile>
-      <profile default="false" name="Annotation profile for tx-mysql-mysql" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="tx-mysql-mysql" />
-      </profile>
-      <profile default="false" name="Annotation profile for tx-jta" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="tx-jta" />
-      </profile>
-      <profile default="false" name="Annotation profile for tx-jms-db" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
+        <module name="tx" />
+        <module name="tx-jms" />
         <module name="tx-jms-db" />
+        <module name="tx-jms-jpa" />
+        <module name="tx-jpa" />
+        <module name="tx-jpa-db" />
+        <module name="tx-jta" />
+        <module name="tx-mysql-mysql" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

@@ -1,7 +1,7 @@
-package com.zhang.tx_jpa_db.web;
+package com.zhang.txjpadb.web;
 
-import com.zhang.tx_jpa_db.domain.Order;
-import com.zhang.tx_jpa_db.service.CustomerService;
+import com.zhang.txjpadb.domain.Order;
+import com.zhang.txjpadb.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

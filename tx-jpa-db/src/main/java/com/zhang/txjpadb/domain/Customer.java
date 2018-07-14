@@ -1,18 +1,19 @@
-package com.zhang.tx_jpa_db.domain;
+package com.zhang.txjpadb.domain;
 
-import javax.persistence.*;
+//import javax.persistence.*;
+import java.io.Serializable;
 
-@Entity(name = "customer1")
-public class Customer {
+//@Entity(name = "customer1")
+public class Customer implements Serializable{
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer cid;
-    @Column
+//    @Column
     private String name;
-    @Column
+//    @Column
     private String password;
-    @Column
+//    @Column
     private Integer amount;
 
     @Override

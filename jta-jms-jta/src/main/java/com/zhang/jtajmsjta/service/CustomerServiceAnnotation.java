@@ -23,13 +23,17 @@ public class CustomerServiceAnnotation {
     @Transactional
     public Integer add(Customer customer){
         customer = customerDao.save( customer );
-        if( customer.getName().contains( "error")){
-            throw new RuntimeException("error");
+        if( customer.getName().contains( "error1")){
+            throw new RuntimeException("error1");
         }
         jmsTemplate.convertAndSend( "customer:msg:reply", customer.getName());
+        if( customer.getName().contains( "error2")){
+            throw new RuntimeException("error2");
+        }
         return customer.getCid();
     }
 
+    @Transactional
     @JmsListener(destination = "customer:msg1:new")
     public void addListener( String name){
         Customer customer = new Customer();
@@ -37,10 +41,13 @@ public class CustomerServiceAnnotation {
         customer.setPassword("xxx");
         customer.setName( name );
         customerDao.save( customer );
-        if( name.contains( "error")){
-            throw new RuntimeException("error");
+        if( name.contains( "error1")){
+            throw new RuntimeException("error1");
         }
         jmsTemplate.convertAndSend( "customer:msg:reply", name);
+        if( customer.getName().contains( "error2")){
+            throw new RuntimeException("error2");
+        }
     }
 
 
